@@ -48,3 +48,23 @@ const stuff: (number | string)[] = [1, 2, 3, 4, 'asdfs'];
 const coords: (Coord | Loc)[] = [];
 coords.push({ lat: 321.213, long: 23.334 });
 coords.push({ x: 1, y: 34 });
+
+// 리터럴 타입 - 꼭 유니온 타입과 연관이 있는 것은 아니지만 종종 유니온 타입과 함께 쓰임
+let zero: 0 = 0;
+// zero = 2; Error -> zero의 타입은 숫자 0만을 가지는 리터럴 타입
+let hi: 'hi' = 'hi';
+// hi = 'Hi' Error -> hi의 타입은 문자 'hi'만을 가지는 리터럴 타입
+let mood: 'Sad' | 'Happy' = 'Happy';
+mood = 'Sad';
+
+type DayOfWeek =
+  | 'Monday'
+  | 'Tuesday'
+  | 'Wednesday'
+  | 'Thursday'
+  | 'Friday'
+  | 'Saturday'
+  | 'Sunday';
+
+let today: DayOfWeek = 'Tuesday';
+// today = 'weds' Error -> today의 타입은 DayOfWeek의 리터럴 타입만을 가질 수 있다.
