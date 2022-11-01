@@ -7,12 +7,12 @@ square(3);
 // square(true) Error
 
 // 매개변수를 annotation으로 지정해주지 않으면 any 타입이 할당됨
-function greet(person) {
+function fnGreet(person) {
   return `Hi there, ${person}`;
 }
 
-greet(3);
-greet('John');
+fnGreet(3);
+fnGreet('John');
 
 const doSomething = (persion: string, age: number, isFunny: boolean) => {};
 doSomething('Tony', 23, true);
@@ -43,8 +43,8 @@ function randomNum(num: number) {
 
 /* map에서 color 매개변수에는 annotation은 쓸 필요가 없다.
 이미 colors의 컨텍스트에서 타입이 정해지므로 greet() 함수와 달리 annotation을 쓸 필요가 없음 */
-const colors = ['red', 'orange', 'yellow'];
-colors.map((color) => {
+const colorsArr = ['red', 'orange', 'yellow'];
+colorsArr.map((color) => {
   return color.toString();
 });
 

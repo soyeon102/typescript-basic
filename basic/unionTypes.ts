@@ -42,8 +42,8 @@ calculateTax(45, 0.07);
 calculateTax('$45', 0.07);
 
 // const nums: number[] = [1, 2, 3, 4];
-// const stuff: any[] = [1, 2, 3, 4, true, 'afdsf', {}];
-const stuff: (number | string)[] = [1, 2, 3, 4, 'asdfs'];
+// const stuffs: any[] = [1, 2, 3, 4, true, 'afdsf', {}];
+const stuffs: (number | string)[] = [1, 2, 3, 4, 'asdfs'];
 
 const coords: (Coord | Loc)[] = [];
 coords.push({ lat: 321.213, long: 23.334 });
