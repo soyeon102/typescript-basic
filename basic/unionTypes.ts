@@ -43,6 +43,7 @@ calculateTax('$45', 0.07);
 
 // const nums: number[] = [1, 2, 3, 4];
 // const stuffs: any[] = [1, 2, 3, 4, true, 'afdsf', {}];
+// 타입이 숫자 또는 문자로만 이루어진 배열
 const stuffs: (number | string)[] = [1, 2, 3, 4, 'asdfs'];
 
 const coords: (Coord | Loc)[] = [];

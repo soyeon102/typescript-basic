@@ -15,13 +15,13 @@ tvsShow = 'The other';
 let isFunny = false;
 isFunny = true;
 
-// the any type - 어떤 타입이든 상관없이 지정할 수 있는 타입
+// any type - 어떤 타입이든 상관없이 지정할 수 있는 타입
 let thing: any = 'hello';
 thing = 1;
 thing = false;
 thing();
 
-// Type Annotation으로 타입을 직접 할당해야 하는 경우도 존재
+// Annotation으로 타입을 직접 할당해야 하는 경우도 존재
 const movies = ['Arrival', 'The Thing', 'Aliens', 'Amadeus'];
 let foundMovie; // 값을 할당하지 않은 상태에서는 타입이 any로 지정
 // let foundMovie: string; -> 이렇게 Annotation으로 직접 지정해주는 것이 좋음. 즉, 암시적으로 any 타입 할당을 막기 위해 사용
