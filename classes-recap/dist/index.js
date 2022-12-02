@@ -6,7 +6,7 @@ class Player {
     player1.description = undefined,
     Player.description = "Player In Our Game"
     로 반환된다.
-   */
+  */
   static description = 'Player In Our Game';
 
   #score = 0;
@@ -65,6 +65,7 @@ class Player {
   }
 }
 
+// 클래스 확장
 class AdminPlayer extends Player {
   constructor(first, last, powers) {
     // 부모 클래스에 있는 constructor() 함수를 참조
@@ -99,5 +100,3 @@ player1.fullName = 'Adam amy';
 console.log(player1);
 
 Player.randomPlayer();
-
-// 클래스 확장
