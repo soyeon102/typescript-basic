@@ -52,7 +52,8 @@ getRandomElement<string>(["a", "b", "c"]);
 getRandomElement([1, 3, 523, 214, 23]);
 
 // 다른 타입을 함께 작성할 때는 T 다음에 U를 붙이는 것이 관례다.
-function merge<T, U>(obj1: T, obj2: U) {
+// extends 를 붙여 타입이 object만 올 수 있도록 제한시킨다.
+function merge<T extends object, U extends object>(obj1: T, obj2: U) {
   return {
     ...obj1,
     ...obj2,
@@ -61,3 +62,4 @@ function merge<T, U>(obj1: T, obj2: U) {
 
 // merge<{name: string, {pets: string[]}}>({name: 'colt'}, {pets: ['blue', 'elton']})
 const comboObj = merge({ name: "colt" }, { pets: ["blue", "elton"] });
+merge({ name: "colt" }, { num: 9 });
