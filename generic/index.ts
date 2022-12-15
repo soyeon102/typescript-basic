@@ -86,3 +86,14 @@ function makeEmptyArray<T = number>(): T[] {
 const numbers = makeEmptyArray();
 // 제너릭 타입을 지정해주었으므로 booleans는 boolean[] 타입으로 지정된다.
 const booleans = makeEmptyArray<boolean>();
+
+interface Song {
+  title: string;
+  artist: string;
+}
+
+interface Video {
+  title: string;
+  creator: string;
+  resolution: string;
+}
