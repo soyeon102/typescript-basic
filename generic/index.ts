@@ -63,3 +63,26 @@ function merge<T extends object, U extends object>(obj1: T, obj2: U) {
 // merge<{name: string, {pets: string[]}}>({name: 'colt'}, {pets: ['blue', 'elton']})
 const comboObj = merge({ name: "colt" }, { pets: ["blue", "elton"] });
 merge({ name: "colt" }, { num: 9 });
+
+// 인터페이스 확장
+interface Lengthy {
+  length: number;
+}
+
+function printDoubleLength(thing: Lengthy): number {
+  return thing.length;
+}
+
+printDoubleLength("asdfsdf");
+// length 프로퍼티가 없으므로 에러 발생
+// printDoubleLength(dfsdfds)
+
+// 기본 타입 파라미터
+function makeEmptyArray<T = number>(): T[] {
+  return [];
+}
+
+// 제네릭 타입을 지정해주지 않았으므로 numbers는 number[] 타입으로 지정된다.
+const numbers = makeEmptyArray();
+// 제너릭 타입을 지정해주었으므로 booleans는 boolean[] 타입으로 지정된다.
+const booleans = makeEmptyArray<boolean>();
